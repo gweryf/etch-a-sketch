@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+* {
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+
+.logo {
+    width: 10%;
+}
+
+.main-log {
+    font-weight: 500;
+    display: flex;
+    font-size: 200%;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 0.1%;
+}
