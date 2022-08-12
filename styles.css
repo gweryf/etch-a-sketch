@@ -18,6 +18,22 @@
 
 .bar {
     border-bottom-style: solid;
-    border-bottom-color: black;
+    border-bottom-color: rgb(187, 149, 105);
     border-bottom-width: 0.1%;
+    margin-bottom: 3%;
+}
+
+#canvas {
+    width: 60%;
+    height: 50%;
+    border-style: groove;
+    border-color: black;
+    border-radius: 3px;
+    grid-template-columns: auto auto;
+}
+
+
+.canvas-element {
+    width:60px;
+    height: 10px;
 }
