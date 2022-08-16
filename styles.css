@@ -24,16 +24,16 @@
 }
 
 #canvas {
-    width: 60%;
-    height: 50%;
-    border-style: groove;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    border-style: inherit;
+    border-width: 3px;
     border-color: black;
-    border-radius: 3px;
-    grid-template-columns: auto auto;
 }
 
 
-.canvas-element {
-    width:60px;
+/* .canvas-element {
+    width: 10px;
     height: 10px;
-}
+} */
