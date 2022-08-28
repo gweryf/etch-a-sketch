@@ -1,37 +1,65 @@
-const canvas = document.getElementById('canvas');
-const colorbut = document.getElementById('color');
-const rgbbut = document.getElementById('rgb');
-const eraserbut = document.getElementById('eraser');
-const clearbut = document.getElementById('clear');
 
-let defcolor = 'black';
+let color = 'black';
 
-let r = Math.random*100;
-let g = Math.random*100;
-let b = Math.random*100;
+function createCanva(size) {
+    const canva = document.querySelector('#canvas');
 
+    let canvasesss = canva.querySelectorAll('div');
+    canvasesss.forEach((div)=>div.remove());
 
+    canva.style.gridTemplateColumns = `repeat(${size},1fr)`;
+    canva.style.gridTemplateRows = `repeat(${size},1fr)`;
+    let amount = size*size;
+    for(let i = 0;i<amount;i++) {
+        let canvases = document.createElement('div');
+        canvases.style.backgroundColor = 'grey';
 
-eraserbut.addEventListener('click',function(e){
-    defcolor = 'grey';
-    // console.log(e);
-});
+        canvases.addEventListener('mouseover',colorChange);
 
-
-colorbut.addEventListener('click',function(e){
-    defcolor = 'black';
-    // console.log(e);
-});
-
-
-canvas.style.gridTemplateColumns = 'repeat(16,1fr)';
-canvas.style.gridTemplateColumns = 'repeat(16,1fr)';
-for(let i = 0;i<16*16;i++){
-    let canvasele = document.createElement('div');
-    canvasele.className = 'canvas-element';
-    canvasele.style.background = 'grey';
-    canvasele.addEventListener('mouseover',function(){
-        canvasele.style.background = defcolor;
-    });
-    canvas.appendChild(canvasele);
+        canva.appendChild(canvases);
+    }
 }
+
+createCanva(16);
+
+function changeCanva(input) {
+    createCanva(input);
+}
+
+function colorChange() {
+
+    if (color == 'rgb') {
+        this.style.backgroundColor = `hsl(${Math.random()*360},100%, 50%)`;
+    } else {
+        this.style.backgroundColor = color;
+    }
+    
+}
+
+function colormod(choice) {
+    color = choice;
+}
+
+const colorbtn = document.getElementById("color");
+const rgbbtn = document.getElementById("rgb");
+const eraserbtn = document.getElementById("eraser");
+const clearbtn = document.getElementById("clear");
+
+colorbtn.addEventListener('click',function(){
+    colormod('black');
+});
+
+
+eraserbtn.addEventListener('click',function(){
+    colormod('grey');
+});
+
+rgbbtn.addEventListener('click',function(){
+    colormod('rgb');
+});
+
+clearbtn.addEventListener('click',function(){
+    let canva = document.getElementById('canvas');
+    let temporary = canva.querySelectorAll('div');
+    temporary.forEach((div)=>div.style.backgroundColor = 'grey');
+})

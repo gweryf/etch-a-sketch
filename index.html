@@ -13,6 +13,8 @@
             Etch-a-<img class="logo" src="./images/Graffiti-Sketch.webp" alt="A logo that says sketch">
         </div>
     </nav>
+
+    
     <div class="body">
         <div id="canvas">
             
@@ -23,6 +25,11 @@
             <button id="rgb">RGB</button>
             <button id="eraser">Eraser</button>
             <button id="clear">Clear</button>
+
+            <div class="slidecontainer">
+                <div>Size:</div>
+                <input type="range" min="2" max="50" value="16" class="slider" id="myRange" onchange="changeCanva(this.value)">
+            </div>
         </div>
     </div>
 
