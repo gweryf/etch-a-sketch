@@ -12,7 +12,7 @@ function createCanva(size) {
     let amount = size*size;
     for(let i = 0;i<amount;i++) {
         let canvases = document.createElement('div');
-        canvases.style.backgroundColor = 'grey';
+        canvases.style.backgroundColor = 'white';
 
         canvases.addEventListener('mouseover',colorChange);
 
@@ -51,7 +51,7 @@ colorbtn.addEventListener('click',function(){
 
 
 eraserbtn.addEventListener('click',function(){
-    colormod('grey');
+    colormod('white');
 });
 
 rgbbtn.addEventListener('click',function(){
@@ -61,5 +61,5 @@ rgbbtn.addEventListener('click',function(){
 clearbtn.addEventListener('click',function(){
     let canva = document.getElementById('canvas');
     let temporary = canva.querySelectorAll('div');
-    temporary.forEach((div)=>div.style.backgroundColor = 'grey');
+    temporary.forEach((div)=>div.style.backgroundColor = 'white');
 })
