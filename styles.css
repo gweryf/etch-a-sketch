@@ -2,29 +2,53 @@
 
 * {
     font-family: 'Mouse Memoirs', sans-serif;
+    margin: 0%;
 }
 
-.logo {
-    width: 10%;
+body {
+    background-color: rgb(219, 219, 219);
 }
 
 .main-log {
     font-weight: 500;
     display: flex;
-    font-size: 200%;
+    font-size: 400%;
     align-items: center;
     justify-content: center;
+    color: blue;
 }
 
 .bar {
-    border-bottom-style: solid;
-    border-bottom-color: rgb(187, 149, 105);
-    border-bottom-width: 0.1%;
     margin-bottom: 3%;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 #canvas {
     width: 500px;
     height: 500px;
     display: grid;
+}
+
+.body {
+    display: flex;
+    gap:10%;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    padding: 6%;
+}
+
+#color,#rgb,#clear,#eraser {
+    border: none;
+    background-color: rgb(244, 143, 159);
+    color: black;
+    border-radius: 5px;
+    padding: 3%;
+    font-size: 120%;
 }
