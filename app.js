@@ -47,15 +47,24 @@ const clearbtn = document.getElementById("clear");
 
 colorbtn.addEventListener('click',function(){
     colormod('black');
+    colorbtn.style.borderStyle = "solid";
+    eraserbtn.style.borderStyle = "none";
+    rgbbtn.style.borderStyle = "none";
 });
 
 
 eraserbtn.addEventListener('click',function(){
     colormod('white');
+    eraserbtn.style.borderStyle = "solid";
+    colorbtn.style.borderStyle = "none";
+    rgbbtn.style.borderStyle = "none";
 });
 
 rgbbtn.addEventListener('click',function(){
     colormod('rgb');
+    rgbbtn.style.borderStyle = "solid";
+    colorbtn.style.borderStyle = "none";
+    eraserbtn.style.borderStyle = "none";
 });
 
 clearbtn.addEventListener('click',function(){
